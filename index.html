@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BrainDeck – 10 AI-Powered Learning Tools</title><meta name="description" content="Resume builder, notes, slides, mind maps, quizzes, tutor, flashcards, planner and OCR – powered by AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0..1,0&display=swap" rel="stylesheet">
+<style>
+:root{--p:#3525cd;--pc:#4f46e5;--s:#6b38d4;--t:#005338;--tf:#6ffbbe;--bg:#faf8ff;--sl:#f2f3ff;--sc:#eaedff;--sh:#e2e7ff;--tx:#131b2e;--mu:#464555;--ol:#c7c4d8;--ok:#0f9d7a;--bad:#ba1a1a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--tx);font:14px/20px Inter,system-ui,sans-serif;padding-bottom:84px}
+h1,h2,h3,b,.tab,.b{font-family:"Plus Jakarta Sans",Inter,sans-serif}
+.material-symbols-outlined{font-size:20px;vertical-align:middle;font-variation-settings:'FILL' 0}
+header{position:sticky;top:0;z-index:20;background:linear-gradient(90deg,var(--p),var(--pc),var(--s));box-shadow:0 1px 8px #4f46e526;color:#fff}
+.hr{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:10px 16px}.brand{display:flex;gap:10px;align-items:center}.brand b{font-size:18px;display:block;line-height:1}.brand small{font-size:10px;letter-spacing:.08em;color:#dad7ff}
+.logo,.ib{width:38px;height:38px;border-radius:12px;background:#ffffff26;display:flex;align-items:center;justify-content:center;border:0;color:#fff;cursor:pointer}
+.hr2{display:flex;gap:8px;align-items:center}.chip{background:#ffffff33;padding:4px 12px;border-radius:99px;font-size:12px;font-weight:600}
+nav{max-width:1100px;margin:auto;display:flex;gap:8px;overflow-x:auto;padding:0 16px 10px;scrollbar-width:none}nav::-webkit-scrollbar{display:none}
+.tab{flex:none;display:flex;gap:6px;align-items:center;padding:6px 13px;border-radius:99px;border:0;background:#ffffff26;color:#fff;font-size:13px;font-weight:600;cursor:pointer;transition:.2s}.tab .material-symbols-outlined{font-size:16px}.tab.on{background:#fff;color:var(--p);box-shadow:0 2px 8px #3525cd33}
+main{max-width:1100px;margin:16px auto;padding:0 16px;display:flex;flex-direction:column;gap:16px}
+.strip{background:var(--sl);border-radius:16px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.strip .v{width:32px;height:32px;border-radius:10px;background:var(--pc);color:#fff;display:inline-flex;align-items:center;justify-content:center;margin-right:10px}
+.rl{background:var(--sh);color:var(--p);font:600 11px monospace;padding:2px 9px;border-radius:99px;margin-left:8px}.mu{color:var(--mu);font-size:12px}
+section{display:none;background:#fff;border-radius:16px;padding:24px;box-shadow:0 1px 6px #4f46e514}section.on{display:block}
+.th{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}.ic{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center}.c0{background:#e2dfff;color:var(--p)}.c1{background:#e9ddff;color:var(--s)}.c2{background:#6ffbbe;color:var(--t)}.c3{background:#c3c0ff;color:var(--p)}
+.tt{flex:1;min-width:180px}h2{margin:0;font-size:20px;line-height:26px}.tt p{margin:0;color:var(--mu);font-size:12px}.bdg{background:#3525cd1a;color:var(--p);font-size:11px;font-weight:700;padding:4px 12px;border-radius:99px}
+input,textarea,select{width:100%;padding:10px 12px;border:0;border-radius:12px;background:var(--sl);color:var(--tx);font:inherit;margin:4px 0 12px;outline:none}input:focus,textarea:focus,select:focus{background:#fff;box-shadow:0 0 0 2px #4f46e54d}textarea{min-height:88px;resize:vertical}
+label{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--mu)}.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0 14px}
+.b{background:linear-gradient(90deg,var(--p),var(--pc));color:#fff;border:0;height:42px;padding:0 20px;border-radius:12px;cursor:pointer;font-size:14px;font-weight:600;margin:2px 6px 2px 0;box-shadow:0 2px 8px #4f46e54d}.b.g{background:var(--sc);color:var(--p);box-shadow:none}.b:disabled{opacity:.6;cursor:wait}
+.out{margin-top:16px;padding:16px;background:var(--sl);border-radius:14px;overflow-x:auto}.out:empty{display:none}.err{color:var(--bad)}.msg{color:var(--mu)}
+.out h1,.out h2,.out h3{margin:12px 0 4px;color:var(--p)}.out h1{font-size:20px}.out h2{font-size:17px}.out h3{font-size:15px}.out ul{padding-left:20px;margin:4px 0}
+.slide{background:linear-gradient(135deg,var(--pc),var(--s));color:#fff;border-radius:16px;padding:34px;min-height:260px}.slide h3{font-size:26px;margin:0 0 14px;color:#fff}.slide li{margin:8px 0;font-size:17px}
+.opt{display:block;width:100%;text-align:left;padding:12px 14px;margin:6px 0;border:0;background:#fff;color:var(--tx);border-radius:12px;cursor:pointer;font:inherit;box-shadow:0 1px 3px #0001}.opt:hover{background:var(--sc)}.opt.ok{background:var(--ok);color:#fff}.opt.no{background:var(--bad);color:#fff}
+.fc{perspective:1000px;height:230px;max-width:460px;margin:12px auto;cursor:pointer}.fc div{position:relative;height:100%;transition:transform .55s;transform-style:preserve-3d}.fc.f div{transform:rotateY(180deg)}
+.fc span{position:absolute;inset:0;backface-visibility:hidden;display:flex;align-items:center;justify-content:center;text-align:center;padding:26px;border-radius:18px;background:linear-gradient(135deg,var(--pc),var(--s));color:#fff;font:600 18px "Plus Jakarta Sans"}.fc span+span{transform:rotateY(180deg);background:#fff;color:var(--tx);box-shadow:0 2px 12px #4f46e533}
+.chat{height:330px;overflow-y:auto;background:var(--sl);border-radius:14px;padding:12px}.bub{max-width:86%;padding:10px 14px;border-radius:16px;margin:8px 0;background:#fff;box-shadow:0 1px 3px #0001;white-space:pre-wrap}.bub.u{background:var(--pc);color:#fff;margin-left:auto}.bub p{margin:0}
+table{border-collapse:collapse;width:100%;font-size:13px}th{background:var(--sc);text-transform:uppercase;font-size:11px;color:var(--mu)}td,th{padding:10px 12px;text-align:left;border-bottom:1px solid var(--sc)}
+#mm{width:100%;height:440px;border-radius:14px;background:var(--sl);margin-top:14px}.tag{display:inline-block;color:#fff;padding:3px 10px;border-radius:8px;margin:2px;font-size:12px;font-weight:600}
+pre{background:var(--sl);padding:12px;border-radius:10px;overflow-x:auto;font-size:12px}.goal{font-size:11px;color:var(--mu);margin-top:18px;padding-top:10px;border-top:1px solid var(--sc)}
+#modal{position:fixed;inset:0;background:#283044a6;backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}#modal.on{display:flex}#modal>div{background:#fff;border-radius:16px;padding:24px;max-width:440px;width:100%;max-height:92vh;overflow:auto}
+.bar{position:fixed;bottom:0;width:100%;z-index:20;background:#faf8ffe6;backdrop-filter:blur(14px);box-shadow:0 -1px 8px #0000000a}.bar>div{max-width:1100px;margin:auto;height:60px;padding:0 16px;display:flex;justify-content:space-between;align-items:center}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--t);margin-right:5px}
+@media print{header,.bar,.strip,nav{display:none}}
+
+/* ===== Responsive layout + tidy navbar ===== */
+html{-webkit-text-size-adjust:100%}img,svg,table{max-width:100%}
+header{position:static}
+@media(min-width:700px){header{position:sticky;top:0}}
+nav{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;overflow:visible;padding:0 12px 12px}
+@media(min-width:900px){nav{grid-template-columns:repeat(10,1fr);gap:8px;padding:0 16px 12px}}
+.tab{flex-direction:column;justify-content:center;gap:2px;padding:8px 2px;border-radius:12px;font-size:10.5px;line-height:14px;text-align:center;white-space:nowrap;min-width:0}
+.tab .material-symbols-outlined{font-size:20px}
+.tab span:last-child{overflow:hidden;text-overflow:ellipsis;max-width:100%}
+@media(min-width:900px){.tab{font-size:12px;padding:9px 4px}}
+.tab:hover{background:#ffffff40}.tab.on:hover{background:#fff}
+.bar{padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(max-width:900px){.bdg{display:none}}
+@media(max-width:600px){
+ body{padding-bottom:76px}main{padding:0 10px;margin:10px auto;gap:12px}section{padding:16px;border-radius:14px}
+ .hr{padding:8px 12px}.brand b{font-size:16px}.brand small{display:none}.chip{font-size:11px;padding:3px 9px}
+ .strip{padding:12px}h2{font-size:17px;line-height:22px}.th{gap:10px;margin-bottom:14px}.ic{width:38px;height:38px}
+ .slide{padding:22px;min-height:220px}.slide h3{font-size:21px}.slide li{font-size:15px}
+ .fc{height:200px}.fc span{font-size:16px;padding:18px}.chat{height:280px}#mm{height:340px}
+ .b{flex:1 1 auto;margin:3px 4px 3px 0;padding:0 14px}.row{grid-template-columns:1fr}
+ input,textarea,select{font-size:16px}.bar>div{height:56px}#modal>div{padding:18px}
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.17.0/dist/browser/index.iife.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/5.1.0/tesseract.min.js"></script></head><body>
+<header><div class="hr"><div class="brand"><div class="logo"><span class="material-symbols-outlined">auto_awesome</span></div><div><b>BrainDeck</b><small>ACADEMIC CO-PILOT</small></div></div>
+<div class="hr2"><span id="mode" class="chip"></span><button class="ib" aria-label="Settings" onclick="$('modal').classList.add('on')"><span class="material-symbols-outlined">settings</span></button></div></div><nav id="nav"></nav></header>
+<main>
+<div class="strip"><div style="display:flex;align-items:center"><span class="v"><span class="material-symbols-outlined">verified</span></span><div><b class="uname"></b><span class="rl uroll"></span><div class="mu ucourse"></div></div></div><button class="b g" onclick="$('modal').classList.add('on')">⚙ Config</button></div>
+
+<section id="t1"><div class="row"><div><label>Full name</label><input id="r_n" value="Riya Sharma"></div><div><label>Contact</label><input id="r_c" value="riya@email.com | +91 90000 00000"></div></div>
+<label>Objective</label><input id="r_o" value="Seeking a software internship"><div class="row"><div><label>Education</label><textarea id="r_e">B.Tech CSE, 2nd year, CGPA 8.4</textarea></div><div><label>Skills</label><textarea id="r_s">Python, HTML/CSS/JS, SQL</textarea></div></div>
+<label>Experience</label><textarea id="r_x">Built a college event website; hackathon finalist</textarea>
+<button class="b" onclick="resume(this)">✨ Generate resume</button><button class="b g" onclick="pdf('resume.pdf','r_out')">Download PDF</button><div class="out" id="r_out"></div></section>
+
+<section id="t2"><label>Raw text / topic</label><textarea id="n_in">Photosynthesis is how plants convert light into chemical energy.</textarea>
+<button class="b" onclick="notes(this)">🧠 Generate notes</button><button class="b g" onclick="cp('n_out')">Copy</button><button class="b g" onclick="txt('notes.txt','n_out')">.txt</button><button class="b g" onclick="pdf('notes.pdf','n_out')">PDF</button><div class="out" id="n_out"></div></section>
+
+<section id="t3"><label>Topic</label><input id="p_in" value="Climate Change"><button class="b" onclick="slides(this)">Generate slides</button><button class="b g" onclick="pptx()">Export .pptx</button>
+<div id="p_out" class="out"></div><div id="p_nav" style="display:none;margin-top:10px"><button class="b g" onclick="sl(-1)">◀ Previous</button><button class="b" onclick="sl(1)">Next ▶</button> <span id="p_c" class="msg"></span></div></section>
+
+<section id="t4"><label>Syllabus / topic list</label><textarea id="m_in">Unit 1: Arrays, Linked Lists, Stacks. Unit 2: Trees, Graphs. Unit 3: Sorting, Searching.</textarea><button class="b" onclick="mind(this)">Build mind map</button>
+<svg id="mm"></svg><div class="out" id="m_det"></div></section>
+
+<section id="t5"><div class="row"><div><label>Student</label><input id="s_n"></div><div><label>Subject</label><input id="s_s"></div><div><label>Marks</label><input id="s_m" type="number"></div></div>
+<button class="b" onclick="addRow(this)">+ Add row</button><button class="b g" onclick="loadRows()">Refresh</button><button class="b g" onclick="insight(this)">✨ AI insight</button><div id="s_st" class="msg"></div><div class="out" id="s_tb"></div><div class="out" id="s_ai"></div>
+<details style="margin-top:12px"><summary>Apps Script code (Extensions → Apps Script)</summary><pre>function doGet(){var v=SpreadsheetApp.getActiveSheet().getDataRange().getValues();
+return ContentService.createTextOutput(JSON.stringify(v)).setMimeType(ContentService.MimeType.JSON)}
+function doPost(e){var d=JSON.parse(e.postData.contents);
+SpreadsheetApp.getActiveSheet().appendRow([d.name,d.subject,d.marks]);return ContentService.createTextOutput("ok")}
+// Row 1 headers: Student | Subject | Marks. Deploy → Web app → Anyone.</pre></details></section>
+
+<section id="t6"><label>Topic or notes</label><textarea id="q_in">Basics of the solar system</textarea><button class="b" onclick="quiz(this)">Generate quiz</button><div class="out" id="q_out"></div></section>
+
+<section id="t7"><label>Subject</label><input id="c_sub" placeholder="e.g. Physics"><div class="chat" id="c_box"></div>
+<input id="c_in" placeholder="Ask your doubt and press Enter…" onkeydown="if(event.key=='Enter')chat()" style="margin-top:10px"><button class="b" onclick="chat()">Send</button><button class="b g" onclick="hist=[];$('c_box').innerHTML=''">Clear chat</button></section>
+
+<section id="t8"><label>Study text</label><textarea id="f_in">The mitochondria is the powerhouse of the cell. DNA carries genetic information.</textarea><button class="b" onclick="cards(this)">Generate cards</button>
+<div id="f_out"></div><div id="f_nav" style="display:none;text-align:center"><button class="b g" onclick="fcNext(-1)">Previous</button><button class="b" onclick="fcNext(1)">Next</button><button class="b g" onclick="shuf()">Shuffle</button><div id="f_c" class="msg"></div></div></section>
+
+<section id="t9"><label>Subjects (comma separated)</label><input id="pl_s" value="Maths, Physics, Chemistry"><div class="row"><div><label>Hours per day</label><input id="pl_h" type="number" value="4"></div><div><label>Exam date</label><input id="pl_d" type="date"></div></div>
+<button class="b" onclick="plan(this)">Generate plan</button><button class="b g" onclick="plan(this)">↻ Regenerate</button><div class="out" id="pl_out"></div></section>
+
+<section id="t10"><label>Photo of notes</label><input type="file" id="o_f" accept="image/*"><button class="b" onclick="ocr(this)">Extract text</button>
+<label style="display:block;margin-top:10px">Extracted text (editable)</label><textarea id="o_t"></textarea><button class="b" onclick="osum(this)">Summarize</button><div class="out" id="o_out"></div></section>
+</main>
+<div class="bar"><div><div><b class="uname"></b> <span class="mu uroll"></span><div class="mu"><span class="dot"></span>GitHub Pages Ready</div></div><button class="ib" style="background:#eaedff;color:#3525cd" aria-label="API key" onclick="$('modal').classList.add('on')"><span class="material-symbols-outlined">key</span></button></div></div>
+
+<div id="modal"><div><h2>AI &amp; Cloud Settings</h2><p class="mu">Everything is stored only in this browser. Leave the API key blank to use Demo Mode.</p>
+<div class="row"><div><label>Your name</label><input id="k_a"></div><div><label>Roll no.</label><input id="k_b"></div></div><label>Course / branch</label><input id="k_c">
+<label>AI provider</label><select id="k_p" onchange="defModel()"><option value="gemini">Google Gemini (free tier)</option><option value="openai">OpenAI</option><option value="anthropic">Anthropic Claude</option></select>
+<label>Model</label><input id="k_m"><label>API key</label><input id="k_k" type="password"><label>Google Apps Script Web App URL</label><input id="k_u" placeholder="https://script.google.com/macros/s/…/exec">
+<button class="b" onclick="saveCfg()">Save config</button><button class="b g" onclick="$('modal').classList.remove('on')">Close</button></div></div>
+<script>
+const $=id=>document.getElementById(id), sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const COL=["#4f46e5","#0f9d7a","#e0781f","#c026d3","#0891b2","#dc2626"];
+// >>> EDIT THESE DEFAULTS (shown to your teacher). url = your Google Apps Script Web App URL <<<
+const DEFAULT={name:'Your Name',roll:'Roll No.',course:'B.Tech CSE • BrainDeck Project',url:''};
+const TOOLS=[["badge","Resume","AI Resume Builder","ATS-friendly resume from your details","jsPDF","form handling · prompt design · AI API integration"],
+["edit_note","Notes","Notes Generator","Turn raw text into structured Markdown notes","marked.js","summarization prompts · Markdown rendering"],
+["slideshow","Slides","AI Slide Deck Generator","Topic → slides, export a real .pptx","PptxGenJS","JSON parsing · dynamic DOM · file export"],
+["account_tree","Mind Map","Syllabus Mind Map","Zoom, pan, collapse; click a node for AI detail","markmap.js","hierarchical data · visualization"],
+["table_chart","Sheets","Google Sheets Backend","Read/write a live sheet via Apps Script + AI insight","Apps Script","REST · fetch() · Sheets as free backend"],
+["quiz","Quiz AI","AI Quiz Generator","MCQs with instant feedback and final score","JSON","structured AI output · stateful UI"],
+["smart_toy","Tutor","Doubt-Solving Tutor","Chat tutor that remembers the conversation","Chat","conversation state · chat UI"],
+["style","Flashcards","3D Flashcards","Flip cards for quick revision","CSS 3D","CSS animation · AI-generated data"],
+["calendar_clock","Planner","Study Planner","Colour-coded timetable up to exam day","Planner","scheduling data → grid UI"],
+["document_scanner","OCR","Notes from Photo","Tesseract OCR + AI summary","OCR + AI","OCR · summarization"]];
+TOOLS.forEach((t,i)=>{const b=document.createElement('button');b.className='tab';b.id='nb'+(i+1);b.innerHTML=`<span class="material-symbols-outlined">${t[0]}</span><span>${t[1]}</span>`;b.onclick=()=>show(i+1);$('nav').appendChild(b);
+ const s=$('t'+(i+1));s.insertAdjacentHTML('afterbegin',`<div class="th"><div class="ic c${i%4}"><span class="material-symbols-outlined">${t[0]}</span></div><div class="tt"><h2>${t[2]}</h2><p>${t[3]}</p></div><span class="bdg">${t[4]}</span></div>`);s.insertAdjacentHTML('beforeend',`<div class="goal">Skills: ${t[5]}</div>`)});
+function show(i){for(let k=1;k<=10;k++){$('t'+k).classList.toggle('on',k==i);$('nb'+k).classList.toggle('on',k==i)}$('nb'+i).scrollIntoView({inline:'center',block:'nearest'});location.hash='t'+i}
+show(+(location.hash.slice(2))||1);
+// ---------- settings ----------
+const MODELS={gemini:'gemini-2.5-flash',openai:'gpt-4o-mini',anthropic:'claude-haiku-4-5-20251001'};
+const cfg=()=>{const s=JSON.parse(localStorage.getItem('cfg')||'{}'),o={...DEFAULT};for(const k in s)if(s[k])o[k]=s[k];return o};
+function defModel(){$('k_m').value=MODELS[$('k_p').value]}
+function saveCfg(){localStorage.setItem('cfg',JSON.stringify({prov:$('k_p').value,model:$('k_m').value,key:$('k_k').value.trim(),url:$('k_u').value.trim(),name:$('k_a').value.trim(),roll:$('k_b').value.trim(),course:$('k_c').value.trim()}));$('modal').classList.remove('on');init();loadRows()}
+function init(){const c=cfg();$('k_p').value=c.prov||'gemini';$('k_m').value=c.model||MODELS[$('k_p').value];$('k_k').value=c.key||'';$('k_u').value=c.url||'';$('k_a').value=c.name;$('k_b').value=c.roll;$('k_c').value=c.course;
+ $('mode').textContent=c.key?'● Live AI · '+$('k_p').value:'⚡ Demo Mode';document.querySelectorAll('.uname').forEach(e=>e.textContent=c.name);document.querySelectorAll('.uroll').forEach(e=>e.textContent=c.roll);document.querySelectorAll('.ucourse').forEach(e=>e.textContent=c.course)}
+init();
+// ---------- AI layer ----------
+async function post(url,headers,body){const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json',...headers},body:JSON.stringify(body)});const j=await r.json();if(!r.ok)throw new Error(j.error?.message||j.error||'API error '+r.status);return j}
+async function ask(tool,prompt,o={}){
+ const c=cfg();
+ if(!c.key){await sleep(900);return DEMO[tool]}
+ const msgs=(o.messages||[{role:'user',content:prompt}]).map(m=>({...m}));
+ if(o.json)msgs[msgs.length-1].content+='\n\nReturn ONLY valid JSON. No code fences, no commentary.';
+ const sys=o.system||'';let t;
+ if(c.prov=='gemini'){const b={contents:msgs.map(m=>({role:m.role=='user'?'user':'model',parts:[{text:m.content}]}))};if(sys)b.systemInstruction={parts:[{text:sys}]};if(o.json)b.generationConfig={responseMimeType:'application/json'};
+  t=(await post(`https://generativelanguage.googleapis.com/v1beta/models/${c.model}:generateContent?key=${c.key}`,{},b)).candidates?.[0]?.content?.parts?.[0]?.text}
+ else if(c.prov=='openai'){t=(await post('https://api.openai.com/v1/chat/completions',{Authorization:'Bearer '+c.key},{model:c.model,messages:sys?[{role:'system',content:sys},...msgs]:msgs})).choices[0].message.content}
+ else{t=(await post('https://api.anthropic.com/v1/messages',{'x-api-key':c.key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},{model:c.model,max_tokens:2000,system:sys||undefined,messages:msgs})).content[0].text}
+ if(!o.json)return t;
+ return JSON.parse(t.replace(/^```(?:json)?|```$/gm,'').trim());
+}
+async function go(btn,out,fn){const old=btn?.textContent;if(btn){btn.disabled=true;btn.textContent='Thinking…'}out.innerHTML='<span class="msg">Working…</span>';try{await fn()}catch(e){out.innerHTML='<span class="err">⚠ '+esc(e.message)+'</span>'}if(btn){btn.disabled=false;btn.textContent=old}}
+const md=t=>marked.parse(t);
+// ---------- export helpers ----------
+const cp=id=>{navigator.clipboard.writeText($(id).innerText)};
+function save(name,txt,type='text/plain'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type}));a.download=name;a.click()}
+const txt=(n,id)=>save(n,$(id).innerText);
+function pdf(name,id){const t=$(id).innerText;if(!t.trim())return alert('Generate something first');const d=new jspdf.jsPDF(),L=d.splitTextToSize(t,180);let y=15;L.forEach(l=>{if(y>280){d.addPage();y=15}d.text(l,15,y);y+=6});d.save(name)}
+// ---------- 1 Resume / 2 Notes ----------
+const resume=b=>go(b,$('r_out'),async()=>{$('r_out').innerHTML=md(await ask('resume',`Write a professional ATS-friendly resume in Markdown. Don't invent facts.\nName:${r_n.value}\nContact:${r_c.value}\nObjective:${r_o.value}\nEducation:${r_e.value}\nSkills:${r_s.value}\nExperience:${r_x.value}`))});
+const notes=b=>go(b,$('n_out'),async()=>{$('n_out').innerHTML=md(await ask('notes','Convert this text into short bullet-point study notes with markdown headings:\n'+n_in.value))});
+// ---------- 3 Slides ----------
+let SL=[],si=0;
+const slides=b=>go(b,$('p_out'),async()=>{SL=await ask('slides',`Create 6 slides on "${p_in.value}". JSON: [{"title":"","bullets":["","",""]}] with 3-4 bullets each.`,{json:true});si=0;$('p_nav').style.display='block';drawSl()});
+function drawSl(){const s=SL[si];$('p_out').innerHTML=`<div class="slide"><h3>${esc(s.title)}</h3><ul>${s.bullets.map(x=>'<li>'+esc(x)+'</li>').join('')}</ul></div>`;$('p_c').textContent=`Slide ${si+1} / ${SL.length}`}
+const sl=d=>{si=(si+d+SL.length)%SL.length;drawSl()};
+function pptx(){if(!SL.length)return alert('Generate slides first');const p=new PptxGenJS();SL.forEach(s=>{const x=p.addSlide();x.background={color:'4F46E5'};x.addText(s.title,{x:.5,y:.4,w:9,h:1,fontSize:32,bold:true,color:'FFFFFF'});x.addText(s.bullets.map(t=>({text:t,options:{bullet:true,breakLine:true}})),{x:.7,y:1.6,w:8.6,h:3.5,fontSize:20,color:'FFFFFF'})});p.writeFile({fileName:(p_in.value||'slides')+'.pptx'})}
+// ---------- 4 Mind map ----------
+let MM,TR;
+const mind=b=>go(b,$('m_det'),async()=>{const t=await ask('mind','Convert this syllabus into a nested Markdown outline (# main topic, ## units, ### sub-topics, - key points):\n'+m_in.value);TR=TR||new markmap.Transformer();const {root}=TR.transform(t.replace(/^```\w*|```$/gm,''));$('mm').innerHTML='';MM=markmap.Markmap.create('#mm',{colorFreezeLevel:2},root);$('m_det').innerHTML='<span class="msg">Click a node to get AI details.</span>'});
+$('mm').addEventListener('click',e=>{const f=e.target.closest('foreignObject');const t=f?.textContent.trim();if(t)go(null,$('m_det'),async()=>{$('m_det').innerHTML='<b>'+esc(t)+'</b>'+md(await ask('detail',`Explain "${t}" in 4 short bullet points for a student.`))})});
+// ---------- 5 Sheets ----------
+let rows=JSON.parse(localStorage.getItem('rows')||'[["Student","Subject","Marks"],["Aarav","Maths",82],["Diya","Physics",74],["Kabir","Maths",91]]');
+function drawT(){$('s_tb').innerHTML='<table>'+rows.map((r,i)=>'<tr>'+r.map(c=>`<${i?'td':'th'}>${esc(c)}</${i?'td':'th'}>`).join('')+'</tr>').join('')+'</table>'}
+async function loadRows(){const u=cfg().url;$('s_st').textContent=u?'Connected to Google Sheet':'Demo data (add Web App URL in Settings)';if(u){try{rows=await (await fetch(u)).json()}catch(e){$('s_st').textContent='⚠ Could not read sheet: '+e.message}}drawT()}
+async function addRow(b){const r=[s_n.value,s_s.value,s_m.value];if(!r[0])return;const u=cfg().url;if(u){await fetch(u,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:r[0],subject:r[1],marks:r[2]})});await sleep(1200);await loadRows()}else{rows.push(r);localStorage.setItem('rows',JSON.stringify(rows));drawT()}s_n.value=s_s.value=s_m.value=''}
+const insight=b=>go(b,$('s_ai'),async()=>{$('s_ai').innerHTML=md(await ask('insight','Give a 3-bullet insight (trends, top/low performers) on this marks data:\n'+JSON.stringify(rows)))});
+loadRows();
+// ---------- 6 Quiz ----------
+const quiz=b=>go(b,$('q_out'),async()=>{const qs=await ask('quiz',`Make 5 MCQs from: ${q_in.value}. JSON: [{"q":"","options":["","","",""],"answer":0}] where answer is the index of the correct option.`,{json:true});let sc=0,n=0;const o=$('q_out');o.innerHTML='';qs.forEach((q,i)=>{const d=document.createElement('div');d.innerHTML=`<b>${i+1}. ${esc(q.q)}</b>`;q.options.forEach((t,j)=>{const x=document.createElement('button');x.className='opt';x.textContent=t;x.onclick=()=>{if(d.dataset.done)return;d.dataset.done=1;if(j==q.answer){sc++;x.classList.add('ok')}else{x.classList.add('no');d.children[q.answer+1].classList.add('ok')}if(++n==qs.length)o.insertAdjacentHTML('beforeend',`<h2>🎉 Final score: ${sc} / ${qs.length}</h2>`)};d.appendChild(x)});o.appendChild(d)})});
+// ---------- 7 Chat ----------
+let hist=[];
+async function chat(){const m=c_in.value.trim();if(!m)return;c_in.value='';bub('u',m);hist.push({role:'user',content:m});const b=bub('a','…');try{const r=await ask('chat',m,{messages:hist,system:`You are a helpful tutor for ${c_sub.value||'any subject'}. Explain simply with examples.`});b.innerHTML=md(r);hist.push({role:'assistant',content:r})}catch(e){b.textContent='⚠ '+e.message;hist.pop()}}
+function bub(c,t){const d=document.createElement('div');d.className='bub '+c;d.textContent=t;$('c_box').appendChild(d);$('c_box').scrollTop=1e9;return d}
+// ---------- 8 Flashcards ----------
+let FC=[],fi=0;
+const cards=b=>go(b,$('f_out'),async()=>{FC=await ask('cards',`Make 8 flashcards from: ${f_in.value}. JSON: [{"question":"","answer":""}]`,{json:true});fi=0;$('f_nav').style.display='block';drawF()});
+function drawF(){const c=FC[fi];$('f_out').innerHTML=`<div class="fc" onclick="this.classList.toggle('f')"><div><span>${esc(c.question)}</span><span>${esc(c.answer)}</span></div></div>`;$('f_c').textContent=`${fi+1} / ${FC.length} · click card to flip`}
+const fcNext=d=>{fi=(fi+d+FC.length)%FC.length;drawF()};const shuf=()=>{FC.sort(()=>Math.random()-.5);fi=0;drawF()};
+// ---------- 9 Planner ----------
+const plan=b=>go(b,$('pl_out'),async()=>{const p=await ask('plan',`Create a balanced day-wise study plan starting ${new Date().toDateString()} until ${pl_d.value||'7 days later'} (max 7 days). Subjects: ${pl_s.value}. Hours/day: ${pl_h.value}. JSON: [{"day":"","slots":[{"time":"","subject":""}]}]. Vary the balance each run.`,{json:true});const subs=[...new Set(p.flatMap(d=>d.slots.map(s=>s.subject)))];
+$('pl_out').innerHTML='<table><tr><th>Day</th><th>Schedule</th></tr>'+p.map(d=>`<tr><td><b>${esc(d.day)}</b></td><td>${d.slots.map(s=>`<span class="tag" style="background:${COL[subs.indexOf(s.subject)%6]}">${esc(s.time)} · ${esc(s.subject)}</span>`).join('')}</td></tr>`).join('')+'</table>'});
+// ---------- 10 OCR ----------
+const ocr=b=>go(b,$('o_out'),async()=>{const f=$('o_f').files[0];if(!f)throw new Error('Choose an image first');const r=await Tesseract.recognize(f,'eng');$('o_t').value=r.data.text;$('o_out').innerHTML='<span class="msg">Text extracted. Fix any errors, then press Summarize.</span>'});
+const osum=b=>go(b,$('o_out'),async()=>{$('o_out').innerHTML='<div class="row"><div><b>Original</b><p>'+esc($('o_t').value).replace(/\n/g,'<br>')+'</p></div><div><b>Summary</b>'+md(await ask('osum','Summarize these notes into key points:\n'+$('o_t').value))+'</div></div>'});
+// ---------- Demo data (used when no API key is set) ----------
+const DEMO={
+resume:"# Riya Sharma\nriya@email.com | +91 90000 00000\n\n## Objective\nMotivated B.Tech CSE student seeking a software internship to apply strong programming skills.\n\n## Education\n- B.Tech Computer Science, 2nd Year — CGPA 8.4\n\n## Skills\n- Python, HTML/CSS/JavaScript, SQL\n\n## Experience\n- Built a college event website\n- Hackathon finalist",
+notes:"# Photosynthesis\n## Key Idea\n- Plants convert light energy into chemical energy\n## Inputs\n- Sunlight, water, carbon dioxide\n## Outputs\n- Glucose and oxygen",
+slides:[{title:"What is Climate Change?",bullets:["Long-term shift in temperatures","Driven mainly by greenhouse gases","Accelerated since the Industrial Revolution"]},{title:"Causes",bullets:["Burning fossil fuels","Deforestation","Industrial agriculture"]},{title:"Impacts",bullets:["Rising sea levels","Extreme weather","Loss of biodiversity"]},{title:"Solutions",bullets:["Renewable energy","Reforestation","Sustainable transport"]}],
+mind:"# Data Structures\n## Unit 1\n### Arrays\n### Linked Lists\n### Stacks\n## Unit 2\n### Trees\n### Graphs\n## Unit 3\n### Sorting\n### Searching",
+detail:"- A core topic in the syllabus\n- Learn the definition first\n- Practise with small examples\n- Know common applications",
+insight:"- Average marks are strong (~82)\n- **Kabir** leads in Maths\n- Physics scores trail slightly; add practice",
+quiz:[{q:"Which planet is closest to the Sun?",options:["Venus","Mercury","Earth","Mars"],answer:1},{q:"Which is the largest planet?",options:["Jupiter","Saturn","Neptune","Earth"],answer:0},{q:"Earth's natural satellite is?",options:["Phobos","Titan","Moon","Europa"],answer:2}],
+chat:"Great question! Think of it like this: start with the basic idea, then try a simple example. (Demo mode — add an API key in Settings for real answers.)",
+cards:[{question:"Powerhouse of the cell?",answer:"Mitochondria"},{question:"What carries genetic information?",answer:"DNA"},{question:"Basic unit of life?",answer:"The cell"}],
+plan:[{day:"Day 1",slots:[{time:"6–8 PM",subject:"Maths"},{time:"8–10 PM",subject:"Physics"}]},{day:"Day 2",slots:[{time:"6–8 PM",subject:"Chemistry"},{time:"8–10 PM",subject:"Maths"}]},{day:"Day 3",slots:[{time:"6–8 PM",subject:"Physics"},{time:"8–10 PM",subject:"Chemistry"}]}],
+osum:"- Key points condensed from your notes\n- Verify OCR text before summarizing"};
+
+</script></body></html>
